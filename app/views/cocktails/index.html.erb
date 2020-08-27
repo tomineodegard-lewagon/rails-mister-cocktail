@@ -1,5 +1,52 @@
-<h1> Welcome to mr.Cocktail 🍹 </h1>
-<% @cocktails.each do |cocktail| %>
-  <%= cocktail.name %>
-<% end %>
-<%= link_to "New Cocktail", new_cocktail_path, class: "btn btn-primary btn-sm active" %>
+    <h1> This is Cocktail 101 </h1>
+
+
+  <%= link_to "New Cocktail", new_cocktail_path, class: "btn btn-primary btn-sm active" %>
+
+
+
+  <%= cl_image_tag("https://res.cloudinary.com/tomine/image/upload/v1598552463/helena-yankovska-7EbGkOm8pWM-unsplash_ibwizk.jpg",
+        width: 400, height: 300, crop: :fill) %>
+
+    <% @cocktails.each do |cocktail| %>
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col mb-4">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to "#{cocktail.name}", cocktail_path(cocktail) %></h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-4">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+
